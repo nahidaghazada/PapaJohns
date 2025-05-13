@@ -1,0 +1,7 @@
+.sideBar {
+    display: none !important;
+}
+
+::-webkit-scrollbar {
+        display: none;
+    }

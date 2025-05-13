@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Papa Johns</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="../src/style.css"> -->
+     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+     <link rel="stylesheet" href="../src/sidebar.css">
+     <link rel="stylesheet" href="../src/output.css">
+</head>
+
+<body>
+    <header>
+        <div class="max-w-[1350px] m-auto">
+            <div class="flex justify-between items-center p-3 lg:relative">
+                <a href="../index.htm" class="lg:absolute top-[50%]">
+                    <img src="../img/pj_logo.png" class="w-[120px] xl:w-[230px]" alt="logo" />
+                </a>
+                <div class="w-[75%] lg:w-full flex justify-between items-center">
+                    <div></div>
+                    <div class="hidden lg:flex gap-5 font-bold text-[22px]">
+                        <h4>Restoranlar</h4>
+                        <h4>PapaBonus</h4>
+                    </div>
+                    <div class="hidden lg:flex items-center gap-5 py-2">
+                        <div class="flex items-center">
+                            <div class="flex items-center cursor-pointer relative">
+                                <img class="w-[25px]" src="../img/flag_az.png" alt="lang">
+                                <span class="font-bold text-[20px]">Azərbaycanca</span>
+                            </div>
+                        </div>
+                        <div class="font-bold text-[20px] cursor-pointer">
+                            <h4>Giriş/Qeydiyyat</h4>
+                        </div>
+                        <div>
+                            <div class="min-w-[50px] flex justify-center">
+                            <button onclick="openClose()" class="flex flex-col items-center">
+                                <i class="fa fa-shopping-basket text-[25px] relative"><span
+                                        class="cartBadge absolute top-[-50%] right-[-10%] bg-red-700 text-[9px] p-[5px] text-white font-thin rounded-[50%]">0</span></i>
+                                <span class="text-[12px] font-bold"><span id="cartPrice">0</span> ₼</span>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center lg:hidden w-[100%] lg:w-max">
+                    <div class="flex flex-col items-center">
+                        <div class="flex flex-col items-center cursor-pointer relative">
+                            <img class="w-[25px]" src="../img/flag_az.png" alt="lang">
+                            <span class="text-[12px] font-bold">Az</span>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="flex flex-col items-center">
+                            <i class="fa fa-user text-[25px]"></i>
+                            <span class="text-[12px] font-bold">Giriş</span>
+                        </a>
+                    </div>
+                    <div>
+                       <div class="min-w-[50px] flex justify-center">
+                            <button onclick="openClose()" class="flex flex-col items-center">
+                                <i class="fa fa-shopping-basket text-[25px] relative"><span
+                                        class="cartBadge absolute top-[-50%] right-[-10%] bg-red-700 text-[9px] p-[5px] text-white font-thin rounded-[50%]">0</span></i>
+                                <span class="text-[12px] font-bold"><span id="cartPrice">0</span> ₼</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#b91c1c]">
+            <div class="max-w-[1350px] m-auto">
+                <div
+                    class="flex justify-center lg:justify-between items-center p-3 text-white font-bold text-[14px] lg:text-[25px]">
+                    <div class="hidden lg:block xl:w-[200px]"></div>
+                    <ul id="categoryMenu"
+                        class="flex overflow-scroll-x overflow-auto gap-3 p-2 font-bold text-[20px] uppercase"></ul>
+                    <div class="hidden lg:block">
+                        <a class="flex items-center gap-2 text-[22px]" href="#">0 bal
+                            <span class="px-3 text-[20px] rounded-[50%] font-extrabold bg-green-700">?</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+         
+        <div class="max-w-[1350px] m-auto">
+            <div class="flex justify-around my-5 items-center bg-[#f1f1f1] p-[18px]">
+                <p class="hidden lg:block font-bold text-[24px]">
+                    Promo kodunuz var?
+                    <span class="text-green-700">Endirimdən istifadə edin! </span>
+                </p>
+                <div class="flex gap-2 justify-center">
+                    <input class="border border-green-700 rounded-md p-2 w-full min-[340px]:w-[200px] outline-none"
+                        placeholder="Promo kodu daxil edin">
+                    <button class="w-[60px] bg-green-700 p-2 text-white font-bold rounded-md">
+                        OK
+                    </button>
+                </div>
+            </div>
+            <ul class="bg-[#f1f1f1] font-bold text-[12px] md:text-[20px] flex gap-3 md:gap-5 p-3">
+                <li><a href="#">Hamısı</a></li>
+                <li><a href="#">Toyuqlu</a></li>
+                <li><a href="#">Ət ilə</a></li>
+                <li><a href="#">Vegetarian</a></li>
+                <li><a href="#">Acılı</a></li>
+            </ul>
+
+            <div id="cards" class="flex flex-wrap gap-5 justify-center px-3 pb-[30px]"></div>
+            <div id="modal" class="sideBar flex items-center justify-center inset-0 bg-[#00000078] z-[999] fixed">
+            <div class="w-full h-full bg-white p-5 md:w-[600px] md:h-auto">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-[30px]">Səbət</h3>
+                    <p onclick="openClose()" class="cursor-pointer font-bold flex items-center gap-1">
+                        Bağla
+                        <i class="fa-solid fa-xmark bg-black text-white px-[5.5px] py-[4px] rounded-[50%]"></i>
+                    </p>
+                </div>
+                <p>Səbətinizdə məhsulların sayı: <span id="basketCount">0</span></p>
+                <div id="cartItems" class="my-5 max-h-[400px] overflow-y-scroll"></div>
+                <div class="font-bold items-center mt-5 text-center justify-between sm:flex">
+                    <button class="text-white bg-red-700 p-2 my-2 w-[250px] rounded-md">
+                        SİFARİŞİ GÖNDƏR
+                    </button>
+                    <p class="text-[20px]">
+                        Ümumi məbləğ:
+                        <span id="totalPrice">0</span>
+                        ₼
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+    </main>
+
+    <footer class="fixed font-bold text-white py-5 bg-red-700 w-full left-0 bottom-0 lg:static">
+        <div class="max-w-[1350px] m-auto py-5 text-white font-bold flex justify-between gap-3 text-[12px] md:text-[18px]">
+            <p class="pl-3">© PJA 2024</p>
+            <div>
+                <ul class="flex flex-wrap gap-3 px-3">
+                    <li>
+                        <a href="#">Haqqımızda</a>
+                    </li>
+                    <li>
+                        <a href="#">Sual-Cavab</a>
+                    </li>
+                    <li>
+                        <a href="#">Karyera</a>
+                    </li>
+                    <li>
+                        <a href="#">Xəmir</a>
+                    </li>
+                    <li>
+                        <a href="#">Papa Talk - Şərtlər və Qaydalar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/category.js"></script>
+    <script src="../js/basket.js"></script>
+</body>
+
+</html>
