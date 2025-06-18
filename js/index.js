@@ -7,7 +7,6 @@ function check() {
         fetch("https://papa-johns-data-eta.vercel.app/category")
             .then(res => res.json())
             .then(info => {
-                console.log(info)
                 DATA.length = 0
                 DATA.push(...info);
                 localStorage.setItem("DATA", JSON.stringify(DATA))
