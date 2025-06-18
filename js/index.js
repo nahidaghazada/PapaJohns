@@ -4,7 +4,7 @@ const modal = document.getElementById('modal')
 
 function check() {
     if (DATA.length == 0) {
-        fetch("http://localhost:3000/category")
+        fetch("https://papa-johns-data-eta.vercel.app/category")
             .then(res => res.json())
             .then(info => {
                 console.log(info)
