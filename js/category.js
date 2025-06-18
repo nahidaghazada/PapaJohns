@@ -2,7 +2,7 @@ const cards = document.getElementById('cards')
 let cat = new URLSearchParams(location.search).get("cat")
 const DETAILDATA = []
 
-fetch(`http://localhost:3000/${cat}`)
+fetch(`https://papa-johns-data-eta.vercel.app/${cat}`)
     .then(res => res.json())
     .then(info => { 
         DETAILDATA.push(...info);

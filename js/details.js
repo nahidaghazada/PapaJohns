@@ -9,7 +9,7 @@ let size = ""
 let flag = true
 let DETDATA
 
-fetch(`http://localhost:3000/${cat}/${id}`)
+fetch(`https://papa-johns-data-eta.vercel.app/${cat}/${id}`)
     .then(res => {
         return res.json();
     })
